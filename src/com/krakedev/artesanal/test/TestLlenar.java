@@ -6,7 +6,9 @@ public class TestLlenar {
 
 	public static void main(String[] args) {
 		
+		//ejercicio 1, parte 3: actualizar los test
 		Maquina rubia=new Maquina(
+				"M01",
 				"PILSENER", 
 				"Cerveza fria", 
 				0.02, 
@@ -16,6 +18,7 @@ public class TestLlenar {
 		rubia.imprimir();
 		
 		Maquina negra=new Maquina(
+				"M02",
 				"Club", 
 				"Otra Cerveza", 
 				0.03);

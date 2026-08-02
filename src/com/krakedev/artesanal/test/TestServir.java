@@ -6,7 +6,9 @@ public class TestServir {
 
 	public static void main(String[] args) {
 		
+		//ejercicio 1, parte 3: actualizar los test
 		Maquina rubia=new Maquina(
+				"M01",
 				"PILSENER", 
 				"Cerveza fria", 
 				0.02, 

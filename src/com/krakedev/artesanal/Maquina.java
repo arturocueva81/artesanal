@@ -1,19 +1,24 @@
 package com.krakedev.artesanal;
 
 public class Maquina {
+	
+	//ejercicio 1, , parte 1. agrega atributo codigo de tipo String y actualiza en constructores
+	private String codigo;
 	private String nombreCerveza;
 	private String descripcion;
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double cantidadActual;
 	
-
+	//constructor 1 actualizado
 	public Maquina(
+			String codigo,
 			String nombreCerveza, 
 			String descripcion, 
 			double precioPorMl, 
 			double capacidadMaxima 
 			) {
+		this.codigo=codigo;
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
@@ -21,16 +26,24 @@ public class Maquina {
 		this.cantidadActual = 0;
 	}
 	
+	// constructor 2 actualizado
 	public Maquina(
+			String codigo,
 			String nombreCerveza, 
 			String descripcion, 
 			double precioPorMl 
 			) {
+		this.codigo=codigo;
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
 		this.capacidadMaxima = 1000;
 		this.cantidadActual = 0;
+	}
+	
+	//ejercicio 1, solo metodo GET, sin SET
+	public String getCodigo() {
+		return codigo;
 	}
 
 	public String getNombreCerveza() {
@@ -65,9 +78,11 @@ public class Maquina {
 		return cantidadActual;
 	}
 
+	//ejercicio 1, parte 2: modifica el metodo para mostrar el nuevo atributo: codigo
 	public void imprimir() {
 		String mensaje;
-		mensaje = "Nombre cerveza: " + nombreCerveza 
+		mensaje = "Codigo: " + codigo 
+				+ "Nombre cerveza: " + nombreCerveza 
 				+ "; Descripcion: " + descripcion 
 				+ "; Precio ml: " + precioPorMl
 				+ "; Capacidad Maxima: " + capacidadMaxima 
@@ -75,8 +90,9 @@ public class Maquina {
 		System.out.println(mensaje);
 	}
 	
+	//ejercicio 2: cambio en la logica del tanque
 	public void llenarMaquina() {
-		this.cantidadActual=this.capacidadMaxima-100;
+		this.cantidadActual=this.capacidadMaxima-200;
 	}
 	
 	public boolean recargarCerveza(double cantidad) {
