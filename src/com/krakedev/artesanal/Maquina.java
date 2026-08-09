@@ -41,6 +41,16 @@ public class Maquina {
 		this.cantidadActual = 0;
 	}
 	
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, int capacidadMaxima) {
+		// TODO Auto-generated constructor stub
+		
+		this.nombreCerveza = nombreCerveza;
+		this.descripcion = descripcion;
+		this.precioPorMl = precioPorMl;
+		this.capacidadMaxima = capacidadMaxima;
+		
+	}
+
 	//ejercicio 1, solo metodo GET, sin SET
 	public String getCodigo() {
 		return codigo;
@@ -82,7 +92,7 @@ public class Maquina {
 	public void imprimir() {
 		String mensaje;
 		mensaje = "Codigo: " + codigo 
-				+ "Nombre cerveza: " + nombreCerveza 
+				+ "; Nombre cerveza: " + nombreCerveza 
 				+ "; Descripcion: " + descripcion 
 				+ "; Precio ml: " + precioPorMl
 				+ "; Capacidad Maxima: " + capacidadMaxima 
