@@ -3,11 +3,13 @@ package com.krakedev.artesanal;
 import java.util.ArrayList;
 
 public class NegocioMejorado {
-
+	
+	//1. Crear clase NegocioMejorado
 	private String nombre;
 	private ArrayList<Maquina> maquinas;
 	private int ultimoCodigo=100;
 
+	//2. Inicializar el ArrayList
 	//constructor que inicializa el arreglo de Maquina
 	public NegocioMejorado() {
 		maquinas = new ArrayList<Maquina>();
@@ -39,5 +41,11 @@ public class NegocioMejorado {
 		this.ultimoCodigo = ultimoCodigo;
 	}
 
-
+	//3. Método generarCodigo
+	public String generarCodigo() {
+		int numero = (int) (Math.random()*100)+1;
+		String codigo;
+		codigo = "M-"+numero;
+		return codigo;
+	}
 }
