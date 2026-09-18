@@ -3,17 +3,17 @@ package com.krakedev.artesanal;
 import java.util.ArrayList;
 
 public class NegocioMejorado {
-	
+
 	private String nombre;
-	private ArrayList<Maquina> maquinas = new ArrayList<Maquina>();
+	private ArrayList<Maquina> maquinas;
 	private int ultimoCodigo=100;
-	
-	//constructor
+
+	//constructor que inicializa el arreglo de Maquina
 	public NegocioMejorado() {
-		
+		maquinas = new ArrayList<Maquina>();
 	}
-	
-	
+
+
 	//getters y seters
 	public String getNombre() {
 		return nombre;
@@ -38,6 +38,6 @@ public class NegocioMejorado {
 	public void setUltimoCodigo(int ultimoCodigo) {
 		this.ultimoCodigo = ultimoCodigo;
 	}
-	
+
 
 }
