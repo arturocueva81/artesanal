@@ -35,7 +35,5 @@ public class Cliente {
 	public void setTotalConsumido(double totalConsumido) {
 		this.totalConsumido = totalConsumido;
 	}
-	
-	
 
 }

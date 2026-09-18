@@ -1,15 +1,12 @@
 package com.krakedev.artesanal.testJunit;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.jupiter.api.Test;
-
 import com.krakedev.artesanal.Cliente;
 import com.krakedev.artesanal.Maquina;
 import com.krakedev.artesanal.Negocio;
 
 public class TestConsumoCliente {
-	
 
 	@Test
 	public void probarConsumo() {
@@ -26,5 +23,4 @@ public class TestConsumoCliente {
 		assertEquals(7500,maquinaA.getCantidadActual(),0.0001);
 		assertEquals(6.0, cliente.getTotalConsumido(),0.0001);
 	}
-
 }
