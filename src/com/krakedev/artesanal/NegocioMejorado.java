@@ -8,6 +8,9 @@ public class NegocioMejorado {
 	private String nombre;
 	private ArrayList<Maquina> maquinas;
 	private int ultimoCodigo=100;
+	
+	//8. Crear atributo clientes, sin inicializar
+	private ArrayList<Cliente> clientes;
 
 	//2. Inicializar el ArrayList
 	//constructor que inicializa el arreglo de Maquina
@@ -85,5 +88,13 @@ public class NegocioMejorado {
 		}
 		
 		return null;
+	}
+	
+	//9. Metodo registrarCliente
+	public void registrarCliente(String nombre, String cedula) {
+		Cliente cliente = new Cliente(nombre, cedula);
+		ultimoCodigo++;
+		cliente.setCodigo(ultimoCodigo);
+		clientes.add(cliente);
 	}
 }
