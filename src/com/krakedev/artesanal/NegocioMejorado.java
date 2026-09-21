@@ -55,4 +55,12 @@ public class NegocioMejorado {
 		Maquina maquina = new Maquina(codigo, nombre, descripcion, precio);
 		maquinas.add(maquina);	
 	}
+	
+	//5. Método cargarMaquinas
+	public void cargarMaquinas() {
+		for(int i=0;i<maquinas.size();i++) {
+			Maquina m=maquinas.get(i);
+			m.llenarMaquina();
+		}
+	}
 }
