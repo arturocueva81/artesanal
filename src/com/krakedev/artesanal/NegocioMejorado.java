@@ -50,10 +50,19 @@ public class NegocioMejorado {
 	}
 	
 	//4. Método agregarMaquina
-	public void agregarMaquina(String nombre, String descripcion, double precio) {
+	
+	//7.Validacion de duplicados. modifica la funcion agergarMaquina
+	public boolean agregarMaquina(String nombre, String descripcion, double precio) {
 		String codigo = generarCodigo();
+		
+		Maquina existente =recuperarMaquina(codigo);
+		if(existente != null ) {
+			return false;
+		}
+		
 		Maquina maquina = new Maquina(codigo, nombre, descripcion, precio);
-		maquinas.add(maquina);	
+		maquinas.add(maquina);
+		return true;
 	}
 	
 	//5. Método cargarMaquinas
