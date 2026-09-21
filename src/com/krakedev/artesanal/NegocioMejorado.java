@@ -48,4 +48,11 @@ public class NegocioMejorado {
 		codigo = "M-"+numero;
 		return codigo;
 	}
+	
+	//4. Método agregarMaquina
+	public void agregarMaquina(String nombre, String descripcion, double precio) {
+		String codigo = generarCodigo();
+		Maquina maquina = new Maquina(codigo, nombre, descripcion, precio);
+		maquinas.add(maquina);	
+	}
 }
