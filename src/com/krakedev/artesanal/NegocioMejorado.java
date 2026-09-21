@@ -63,4 +63,18 @@ public class NegocioMejorado {
 			m.llenarMaquina();
 		}
 	}
+	
+	//6. Método recuperarMaquina
+	
+	public Maquina recuperarMaquina(String codigo) {
+		
+		for(int i=0;i<maquinas.size();i++) {
+			Maquina maq=maquinas.get(i);
+			if(maq.getCodigo().equals(codigo)) {
+				return maq;
+			}
+		}
+		
+		return null;
+	}
 }
