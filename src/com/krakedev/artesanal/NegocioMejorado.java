@@ -112,4 +112,15 @@ public class NegocioMejorado {
 		cliente.setCodigo(ultimoCodigo);
 		clientes.add(cliente);
 	}
+	
+	//13. Método buscarClientePorCedula
+	public Cliente buscarClientePorCedula(String cedula) {
+		for(int i=0;i<clientes.size();i++) {
+			Cliente c=clientes.get(i);
+			if(c.getCedula().equals(cedula)) {
+				return c;
+			}
+		}
+		return null;
+	}
 }

@@ -11,6 +11,7 @@ public class TestClientes {
 		negocio.registrarCliente("Arturo Cueva", "0123456789");
 		negocio.registrarCliente("María López", "0987654321");
 		
+		//12. validar funcionamiento
 		System.out.println(" Clientes Registtrados: " + negocio.getClientes().size());
 
 	}
