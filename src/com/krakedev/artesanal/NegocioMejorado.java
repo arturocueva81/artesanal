@@ -123,4 +123,15 @@ public class NegocioMejorado {
 		}
 		return null;
 	}
+	
+	//14. Método buscarClientePorCodigo
+	public Cliente buscarClientePorCodigo(int codigo) {
+	    for (int i = 0; i < clientes.size(); i++) {
+	        Cliente c = clientes.get(i);
+	        if (c.getCodigo() == codigo) {
+	            return c;
+	        }
+	    }
+	    return null;
+	}
 }
