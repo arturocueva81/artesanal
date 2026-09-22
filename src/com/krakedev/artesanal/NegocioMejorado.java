@@ -135,17 +135,20 @@ public class NegocioMejorado {
 	    return null;
 	}
 	
-	//15. Método consumirCerveza
 	
+	//16. Metodo registrarConsumo
 	public void registrarConsumo(Cliente cliente, double valor) {
 	    cliente.setTotalConsumido(cliente.getTotalConsumido() + valor);
 	}
 	
+	//15. Método consumirCerveza
 	public void consumirCerveza(int codigoCliente, String codigoMaquina, double cantidad) {
 	    Maquina maquina = recuperarMaquina(codigoMaquina);
 	    Cliente cliente = buscarClientePorCodigo(codigoCliente);
 
 	    double valor = maquina.servirCerveza(cantidad);
+	    
+	    //17 Integracion
 	    registrarConsumo(cliente, valor);
 	}
 	
