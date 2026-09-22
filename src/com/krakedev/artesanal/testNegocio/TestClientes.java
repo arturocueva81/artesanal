@@ -9,7 +9,9 @@ public class TestClientes {
 		NegocioMejorado negocio = new NegocioMejorado();
 		
 		negocio.registrarCliente("Arturo Cueva", "0123456789");
-		System.out.println("El cliente ha sido registrado");
+		negocio.registrarCliente("María López", "0987654321");
+		
+		System.out.println(" Clientes Registtrados: " + negocio.getClientes().size());
 
 	}
 

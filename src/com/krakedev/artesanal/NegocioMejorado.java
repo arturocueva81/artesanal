@@ -16,6 +16,9 @@ public class NegocioMejorado {
 	//constructor que inicializa el arreglo de Maquina
 	public NegocioMejorado() {
 		maquinas = new ArrayList<Maquina>();
+		
+		//11. Corregir error
+		clientes = new ArrayList<Cliente>();
 	}
 
 
@@ -43,6 +46,18 @@ public class NegocioMejorado {
 	public void setUltimoCodigo(int ultimoCodigo) {
 		this.ultimoCodigo = ultimoCodigo;
 	}
+	
+	
+
+	public ArrayList<Cliente> getClientes() {
+		return clientes;
+	}
+
+
+	public void setClientes(ArrayList<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+
 
 	//3. Método generarCodigo
 	public String generarCodigo() {
