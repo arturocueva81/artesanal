@@ -152,4 +152,14 @@ public class NegocioMejorado {
 	    registrarConsumo(cliente, valor);
 	}
 	
+	//19. Metodo consultarValorVendido
+	public double consultarValorVendido() {
+	    double totalVendido = 0;
+	    for (int i = 0; i < clientes.size(); i++) {
+	        Cliente c = clientes.get(i);
+	        totalVendido = totalVendido + c.getTotalConsumido();
+	    }
+	    return totalVendido;
+	}
+	
 }
